@@ -1,0 +1,17 @@
+<stars>
+    <star>
+        <name>Sun</name>
+        <constellation>Solar System (let it be)</constellation>
+        <stage>Yellow</stage>
+    </star>
+    <star>
+        <name>Antares</name>
+        <constellation>Scorpius</constellation>
+        <stage>Red Supergigant</stage>
+    </star>
+    <star>
+        <name>Orion</name>
+        <constellation>Scorpius</constellation>
+        <stage>Red Supergigant</stage>
+    </star>
+</stars>

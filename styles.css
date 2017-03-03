@@ -1,0 +1,29 @@
+body {  
+    background-image: url('Images/back.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    color: floralwhite;
+}
+
+.form-card {
+    border-color: black;
+    border-width: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    border-radius: 15px;
+    margin: 15px;
+}
+
+ul .glyphicon {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+ul .glyphicon-remove:hover {
+    color: red;
+}
+
+ul .glyphicon-edit:hover {
+    color: lawngreen;
+}

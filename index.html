@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Space explorer</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js'></script>
+        <script type='text/javascript' src='home-page-jquery.js'></script>
+    </head>
+    <body>
+        <div class="form-card col-md-5 col-md-offset-4 clear row">
+            <button class="btn btn-danger pull-right" id="toggle-btn"><span class="glyphicon glyphicon-remove"></span></button>
+            <label id="stat">Hi!</label>
+        </div>
+        <div class="clear">
+            <div class="form-card col-md-5 col-md-offset-4 clear row">
+                <button class="btn btn-default pull-right" id="get-server-stars-json"><span class="glyphicon glyphicon-search"></span> (json)</button>
+                <button class="btn btn-default pull-right" id="get-server-stars-xml"><span class="glyphicon glyphicon-search"></span> (xml)</button>
+                <label id="stat">Click to see what is on server!</label>
+            </div>
+        </div>
+        <div id="container">
+            <div class="form-card col-md-5 col-md-offset-4 clear row">
+                <div class="col-md-9">
+                    <input type="text" id="star-name" class="form-control col-md-9" placeholder="Enter new star's name">
+                </div>
+                <button class="col-md-3 btn btn-primary pull-right" id="add-btn">Add new star</button>
+            </div>
+            <div class="form-card col-md-5 col-md-offset-4 clear">
+                <ul id="star-list" class="list-group">
+                    <li class="list-group-item">
+                        <span class="glyphicon glyphicon-edit"></span>
+                        Nice star #1
+                        <span class="glyphicon glyphicon-remove pull-right"></span>
+                    </li>
+                </ul>
+                <button id="sync" class="col-md-12 btn btn-default"
+                    onclick='var ajax = new XMLHttpRequest();
+                    ajax.onreadystatechange = function() {
+                        if (ajax.readyState == 4 && ajax.status == 200) {
+                            var response = ajax.responseText;
+                            document.getElementById("msg").innerHTML = response;
+                        }
+                    };
+                    ajax.open("GET", "http://localhost:8080/lab4/secret-msg.xml", true);
+                    ajax.send(null);'>Sync with javascript</button>
+            <p id="msg" ></p>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
